@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/numero1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:hint="0.0"
+        android:textAlignment="viewEnd"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.264" />
+
+    <TextView
+        android:id="@+id/numero2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:hint="0.0"
+        android:textAlignment="viewEnd"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.357" />
+
+    <Button
+        android:id="@+id/btnborrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.851"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.468" />
+
+    <Button
+        android:id="@+id/btnsiete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="presionarDigito"
+        android:text="7"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnocho"
+        app:layout_constraintEnd_toStartOf="@+id/btnocho"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnocho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="presionarDigito"
+        android:text="8"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnnueve"
+        app:layout_constraintEnd_toStartOf="@+id/btnnueve"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnsiete" />
+
+    <Button
+        android:id="@+id/btnnueve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="presionarDigito"
+        android:text="9"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnsuma"
+        app:layout_constraintEnd_toStartOf="@+id/btnsuma"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnocho" />
+
+    <Button
+        android:id="@+id/btnsuma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="clicOperacion"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnnueve"
+        app:layout_constraintTop_toBottomOf="@+id/btnborrar" />
+
+    <Button
+        android:id="@+id/btncuatro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="presionarDigito"
+        android:text="4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btncinco"
+        app:layout_constraintEnd_toStartOf="@+id/btncinco"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btncinco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="presionarDigito"
+        android:text="5"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnseis"
+        app:layout_constraintEnd_toStartOf="@+id/btnseis"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btncuatro" />
+
+    <Button
+        android:id="@+id/btnseis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="presionarDigito"
+        android:text="6"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnrestar"
+        app:layout_constraintEnd_toStartOf="@+id/btnrestar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btncinco" />
+
+    <Button
+        android:id="@+id/btnrestar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="clicOperacion"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnseis"
+        app:layout_constraintTop_toBottomOf="@+id/btnsuma" />
+
+    <Button
+        android:id="@+id/btnuno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="presionarDigito"
+        android:text="1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btndos"
+        app:layout_constraintEnd_toStartOf="@+id/btndos"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btndos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="presionarDigito"
+        android:text="2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btntres"
+        app:layout_constraintEnd_toStartOf="@+id/btntres"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnuno" />
+
+    <Button
+        android:id="@+id/btntres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="presionarDigito"
+        android:text="3"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnmultiplicar"
+        app:layout_constraintEnd_toStartOf="@+id/btnmultiplicar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btndos" />
+
+    <Button
+        android:id="@+id/btnmultiplicar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="clicOperacion"
+        android:text="x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btntres"
+        app:layout_constraintTop_toBottomOf="@+id/btnrestar" />
+
+    <Button
+        android:id="@+id/btncero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="presionarDigito"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnpunto"
+        app:layout_constraintEnd_toStartOf="@+id/btnpunto"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnpunto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="presionarDigito"
+        android:text="."
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnigual"
+        app:layout_constraintEnd_toStartOf="@+id/btnigual"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btncero" />
+
+    <Button
+        android:id="@+id/btnigual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        app:layout_constraintBaseline_toBaselineOf="@+id/btndivision"
+        app:layout_constraintEnd_toStartOf="@+id/btndivision"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnpunto" />
+
+    <Button
+        android:id="@+id/btndivision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="clicOperacion"
+        android:text="/"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnigual"
+        app:layout_constraintTop_toBottomOf="@+id/btnmultiplicar" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculadora"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.142" />
+</androidx.constraintlayout.widget.ConstraintLayout>
